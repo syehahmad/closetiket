@@ -1,1 +1,105 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Sedang Dalam Pemeliharaan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            background: #1e293b;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+        }
+
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        p {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .status {
+            display: inline-block;
+            background-color: #334155;
+            color: #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #f59e0b;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🛠️</div>
+        <h1>Website Sedang Dalam Pemeliharaan</h1>
+        <p>Mohon maaf atas ketidaknyamanannya. Saat ini kami sedang melakukan peningkatan sistem untuk memberikan pengalaman yang lebih baik.</p>
+        
+        <div class="status">
+            <span class="status-dot"></span> Pembaruan Sistem Sedang Berlangsung
+        </div>
+
+        <footer>
+            &copy; 2026 NamaWebsiteAnda. Terima kasih atas kesabaran Anda.
+        </footer>
+    </div>
+
+</body>
+</html>
