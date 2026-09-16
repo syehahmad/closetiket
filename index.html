@@ -27,6 +27,7 @@
             <h3>CLOSE TIKET BY <a href="https://ngetik.my.id" target="_blank" class="header-link">ngetik id</a></h3>
         </div>
 
+       <!-- Input Utama & Tempel Tiket -->
         <div class="input-group full-width">
             <label for="raw">Paste Tiket</label>
             <textarea id="raw" placeholder="Paste data tiket mentah di sini..."></textarea>
@@ -36,59 +37,61 @@
         <div class="section-title">Informasi Pelanggan</div>
         <div class="grid-row-3">
             <div class="input-group">
-                <label for="notiket">No Tiket</label>
+                <label>No Tiket</label>
                 <input type="text" id="notiket" placeholder="Tkt-xxxxx">
             </div>
             <div class="input-group">
-                <label for="insiden">No Insiden</label>
+                <label>No Insiden</label>
                 <input type="text" id="insiden" placeholder="INS-xxxxx">
             </div>
             <div class="input-group">
-                <label for="nama">Nama Pelanggan</label>
+                <label>Nama Pelanggan</label>
                 <input type="text" id="nama">
             </div>
         </div>
 
         <div class="grid-row-3">
             <div class="input-group">
-                <label for="sid">SID</label>
+                <label>SID</label>
                 <input type="text" id="sid">
             </div>
             <div class="input-group">
-                <label for="layanan">Layanan (Mbps)</label>
+                <label>Layanan (Mbps)</label>
                 <input type="text" id="layanan">
             </div>
             <div class="input-group">
-                <label for="tim">Tim Teknisi <span style="color: #ef4444;">*</span></label>
+                <label>Tim Teknisi <span style="color: red;">*</span></label>
                 <input type="text" id="tim" list="daftar-tim" placeholder="Ketik atau pilih tim" required>
-                <datalist id="daftar-tim"></datalist>
+                <datalist id="daftar-tim">
+                    
+                </datalist>
             </div>
         </div>
 
         <div class="input-group full-width">
-            <label for="alamat">Alamat</label>
+            <label>Alamat</label>
             <input type="text" id="alamat">
         </div>
 
         <div class="section-title">Perbaikan & Titik Koordinat</div>
         <div class="grid-row-2">
             <div class="input-group">
-                <label for="rootcause">Rootcause <span style="color: #ef4444;">*</span></label>
-                <input type="text" id="rootcause" placeholder="Contoh: Kabel Putus">
+                <label>Rootcause <span style="color: red;">*</span></label>
+                <input type="text" id="rootcause" placeholder="Misal: Kabel Putus">
             </div>
             <div class="input-group">
-                <label for="action">Action <span style="color: #ef4444;">*</span></label>
-                <input type="text" id="action" placeholder="Contoh: Splicing ulang">
+                <label>Action <span style="color: red;">*</span></label>
+                <input type="text" id="action" placeholder="Misal: Splicing ulang">
             </div>
         </div>
 
         <div class="grid-row-2">
             <div class="input-group">
-                <label for="tikoruser">Tikor User <span style="color: #ef4444;">*</span></label>
+                <label>Tikor User <span style="color: red;">*</span></label>
                 <input type="text" id="tikoruser" placeholder="Koordinat rumah user">
             </div>
             <div class="input-group">
-                <label for="tikorputus">Tikor Titik Putus</label>
+                <label>Tikor Titik Putus</label>
                 <input type="text" id="tikorputus" placeholder="Koordinat kabel putus">
             </div>
         </div>
@@ -96,36 +99,37 @@
         <div class="section-title">Material Terpakai</div>
         <div class="grid-row-2">
             <div class="input-group">
-                <label for="snkabel">SN Kabel</label>
+                <label>SN Kabel</label>
                 <input type="text" id="snkabel">
             </div>
             <div class="input-group">
-                <label for="snont">SN ONT</label>
+                <label>SN ONT</label>
                 <input type="text" id="snont">
             </div>
         </div>
         <div class="grid-row-2">
             <div class="input-group">
-                <label for="apc">Pathcord APC</label>
+                <label>Pathcord APC</label>
                 <input type="text" id="apc">
             </div>
             <div class="input-group">
-                <label for="upc">Pathcord UPC</label>
+                <label>Pathcord UPC</label>
                 <input type="text" id="upc">
             </div>
         </div>
         <div class="grid-row-2">
             <div class="input-group">
-                <label for="sleeve">Sleeve Protektor</label>
+                <label>Sleeve Protektor</label>
                 <input type="text" id="sleeve">
             </div>
             <div class="input-group">
-                <label for="pigtail">Pigtail</label>
+                <label>Pigtail</label>
                 <input type="text" id="pigtail">
             </div>
         </div>
     </div>
 
+    <!-- SISI KANAN: PANEL HASIL FORMAT CLOSE -->
     <div class="control-container">
         <div class="action-buttons">
             <button class="btn-success" onclick="generate()">Format Close</button>
