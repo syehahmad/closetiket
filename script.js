@@ -70,20 +70,16 @@ function generate() {
 
     // Format output teks laporan
     const laporan = 
-`*LAPORAN CLOSE TIKET*
------------------------------
+`*FORMAT CLOSE TIKET*
+====================================
 No Tiket : ${getVal("notiket")}
 No Insiden : ${getVal("insiden")}
+Tim Teknisi : ${tim}
 Nama Pelanggan : ${getVal("nama")}
 SID : ${getVal("sid")}
 Layanan : ${getVal("layanan")}
-Tim Teknisi : ${tim}
-Alamat : ${getVal("alamat")}
------------------------------
 Rootcause : ${rootcause}
 Action : ${action}
-Tikor User : ${tikoruser}
-Tikor Titik Putus : ${getVal("tikorputus") || "-"}
 -----------------------------
 *MATERIAL TERPAKAI*
 SN Kabel : ${getVal("snkabel") || "-"}
@@ -92,6 +88,9 @@ Pathcord APC : ${getVal("apc") || "-"}
 Pathcord UPC : ${getVal("upc") || "-"}
 Sleeve Protektor : ${getVal("sleeve") || "-"}
 Pigtail : ${getVal("pigtail") || "-"}`;
+====================================
+Tikor User : ${tikoruser}
+Tikor Titik Putus : ${getVal("tikorputus") || "-"}
 
     document.getElementById("hasil").value = laporan;
 }
