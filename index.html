@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOSE TIKET</title>
+    
+    <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/9nJ5D1-b66o2J8lB9y80-zX5t-xVfWbUebPqUuK2aZ52n_4Q9Q_t8uFpW_Lp2wG5Vw=w240-h480-rw">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="form-container">
+        
+        <div class="dropdown-menu-container">
+            <button class="btn-hamburger" onclick="toggleMenu(event)" title="Menu Navigasi">&#9776;</button>
+            <div id="dropdownContent" class="dropdown-content">
+                <a href="konfirmasi.html" target="_blank">Konfirmasi WA</a>
+                <a href="replace.html" target="_blank">Replace ONT</a>
+                <a href="pindah-fat.html" target="_blank">Pindah FAT</a>
+            </div>
+        </div>
+
+        <div class="header">
+            <img src="https://iconnetsumut.com/wp-content/uploads/2023/09/logo-iconnet.webp" alt="Logo ICONNET" class="logo">
+            <h3>CLOSE TIKET BY <a href="https://ngetik.my.id" target="_blank" class="header-link">ngetik id</a></h3>
+        </div>
+
+        <div class="input-group full-width">
+            <label for="raw">Paste Tiket</label>
+            <textarea id="raw" placeholder="Paste data tiket mentah di sini..."></textarea>
+            <button class="btn-primary" onclick="ambilData()">Generate Data Otomatis</button>
+        </div>
+
+        <div class="section-title">Informasi Pelanggan</div>
+        <div class="grid-row-3">
+            <div class="input-group">
+                <label for="notiket">No Tiket</label>
+                <input type="text" id="notiket" placeholder="Tkt-xxxxx">
+            </div>
+            <div class="input-group">
+                <label for="insiden">No Insiden</label>
+                <input type="text" id="insiden" placeholder="INS-xxxxx">
+            </div>
+            <div class="input-group">
+                <label for="nama">Nama Pelanggan</label>
+                <input type="text" id="nama">
+            </div>
+        </div>
+
+        <div class="grid-row-3">
+            <div class="input-group">
+                <label for="sid">SID</label>
+                <input type="text" id="sid">
+            </div>
+            <div class="input-group">
+                <label for="layanan">Layanan (Mbps)</label>
+                <input type="text" id="layanan">
+            </div>
+            <div class="input-group">
+                <label for="tim">Tim Teknisi <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="tim" list="daftar-tim" placeholder="Ketik atau pilih tim" required>
+                <datalist id="daftar-tim"></datalist>
+            </div>
+        </div>
+
+        <div class="input-group full-width">
+            <label for="alamat">Alamat</label>
+            <input type="text" id="alamat">
+        </div>
+
+        <div class="section-title">Perbaikan & Titik Koordinat</div>
+        <div class="grid-row-2">
+            <div class="input-group">
+                <label for="rootcause">Rootcause <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="rootcause" placeholder="Contoh: Kabel Putus">
+            </div>
+            <div class="input-group">
+                <label for="action">Action <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="action" placeholder="Contoh: Splicing ulang">
+            </div>
+        </div>
+
+        <div class="grid-row-2">
+            <div class="input-group">
+                <label for="tikoruser">Tikor User <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="tikoruser" placeholder="Koordinat rumah user">
+            </div>
+            <div class="input-group">
+                <label for="tikorputus">Tikor Titik Putus</label>
+                <input type="text" id="tikorputus" placeholder="Koordinat kabel putus">
+            </div>
+        </div>
+
+        <div class="section-title">Material Terpakai</div>
+        <div class="grid-row-2">
+            <div class="input-group">
+                <label for="snkabel">SN Kabel</label>
+                <input type="text" id="snkabel">
+            </div>
+            <div class="input-group">
+                <label for="snont">SN ONT</label>
+                <input type="text" id="snont">
+            </div>
+        </div>
+        <div class="grid-row-2">
+            <div class="input-group">
+                <label for="apc">Pathcord APC</label>
+                <input type="text" id="apc">
+            </div>
+            <div class="input-group">
+                <label for="upc">Pathcord UPC</label>
+                <input type="text" id="upc">
+            </div>
+        </div>
+        <div class="grid-row-2">
+            <div class="input-group">
+                <label for="sleeve">Sleeve Protektor</label>
+                <input type="text" id="sleeve">
+            </div>
+            <div class="input-group">
+                <label for="pigtail">Pigtail</label>
+                <input type="text" id="pigtail">
+            </div>
+        </div>
+    </div>
+
+    <div class="control-container">
+        <div class="action-buttons">
+            <button class="btn-success" onclick="generate()">Format Close</button>
+            <button class="btn-copy" onclick="copyText()">Copy</button>
+            <button class="btn-danger" onclick="resetForm()">Reset</button>
+        </div>
+        <textarea id="hasil" readonly placeholder="Hasil format close tiket siap salin akan muncul di sini..."></textarea>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

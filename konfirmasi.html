@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONFIRMASI WA</title>
+    <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/9nJ5D1-b66o2J8lB9y80-zX5t-xVfWbUebPqUuK2aZ52n_4Q9Q_t8uFpW_Lp2wG5Vw=w240-h480-rw">
+    <link rel="stylesheet" href="konfirmasi.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="form-container">
+        
+        <div class="dropdown-menu-container">
+            <button class="btn-hamburger" onclick="toggleMenu(event)" title="Menu Navigasi">&#9776;</button>
+            <div id="dropdownContent" class="dropdown-content">
+                <a href="index.html">Close Tiket</a>
+                <a href="replace.html" target="_blank">Replace ONT</a>
+                <a href="pindah-fat.html" target="_blank">Pindah FAT</a>
+            </div>
+        </div>
+
+        <div class="header">
+            <img src="https://iconnetsumut.com/wp-content/uploads/2023/09/logo-iconnet.webp" alt="Logo ICONNET" class="logo">
+            <h3>KONFIRMASI WA BY <a href="https://ngetik.my.id" target="_blank" class="header-link">ngetik id</a></h3>
+        </div>
+
+        <div class="input-group full-width">
+            <label for="raw">Paste Tiket Mentah</label>
+            <textarea id="raw" placeholder="Paste data tiket mentah di sini..."></textarea>
+            <button class="btn-primary" onclick="ambilData()">Extract Data Otomatis</button>
+        </div>
+
+        <div class="section-title">Informasi Pelanggan</div>
+        <div class="grid-row-2">
+            <div class="input-group">
+                <label for="notiket">No Insiden / Tiket <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="notiket" placeholder="INS-xxxxx / Tkt-xxxxx" oninput="buatPesan()">
+            </div>
+            <div class="input-group">
+                <label for="nama">Nama Pelanggan <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="nama" placeholder="Nama Pelanggan" oninput="buatPesan()">
+            </div>
+        </div>
+
+        <div class="grid-row-2">
+            <div class="input-group">
+                <label for="nohp">No WhatsApp / HP <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="nohp" placeholder="08xxxxxxxxxx">
+            </div>
+            <div class="input-group">
+                <label for="waktuSalam">Pilihan Salam</label>
+                <select id="waktuSalam" onchange="buatPesan()">
+                    <option value="Otomatis">Otomatis (Sesuai Jam)</option>
+                    <option value="Pagi">Selamat Pagi</option>
+                    <option value="Siang">Selamat Siang</option>
+                    <option value="Sore">Selamat Sore</option>
+                    <option value="Malam">Selamat Malam</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="control-container">
+        <div class="action-buttons">
+            <button class="btn-success" onclick="bukaWA()">Kirim WA</button>
+            <button class="btn-copy" onclick="copyWA()">Copy Text</button>
+            <button class="btn-danger" onclick="resetForm()">Reset</button>
+        </div>
+        <textarea id="hasilWA" readonly placeholder="Draft pesan WhatsApp akan otomatis terbuat di sini..."></textarea>
+    </div>
+</div>
+
+<script src="konfirmasi.js"></script>
+</body>
+</html>

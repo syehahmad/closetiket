@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', 'Montserrat', system-ui, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-wrapper {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    max-width: 1350px;
+}
+
+/* Sisi Kiri: Form Input */
+.form-container {
+    flex: 1.8;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative; /* Menjadi acuan tombol strip tiga */
+}
+
+/* Sisi Kanan: Panel Hasil & Aksi */
+.control-container {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    min-height: 550px;
+}
+
+/* Menu Strip Tiga Kiri Atas */
+.dropdown-menu-container {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 100;
+}
+
+.btn-hamburger {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: #4a5568;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    line-height: 1;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-hamburger:hover {
+    background: #edf2f7;
+    color: #004a99;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    background-color: #ffffff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    z-index: 101;
+}
+
+.dropdown-content a {
+    color: #2d3748;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f5f9;
+    color: #004a99;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Header Teks & Logo */
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 15px;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header h3 {
+    font-size: 11px;
+    color: #718096;
+    font-weight: 500;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-link {
+    color: #004a99;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.header-link:hover {
+    text-decoration: underline;
+}
+
+/* Pembagian Baris Menggunakan Grid */
+.grid-row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid-row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group.full-width {
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 5px;
+}
+
+/* Styling Input Elemen */
+input, select, textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 13px;
+    transition: all 0.2s;
+    background: #f8fafc;
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #004a99;
+    box-shadow: 0 0 0 3px rgba(0, 74, 153, 0.15);
+    background: #fff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#raw {
+    min-height: 80px;
+}
+
+/* Pembatas Judul Section */
+.section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #004a99;
+    text-transform: uppercase;
+    border-left: 3px solid #004a99;
+    padding-left: 8px;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
+/* Desain Tombol Kontrol */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-primary { background: #004a99; color: #fff; margin-top: 8px; }
+.btn-primary:hover { background: #003a7a; }
+
+.btn-success { background: #28a745; color: #fff; }
+.btn-success:hover { background: #218838; }
+
+.btn-copy { background: #17a2b8; color: #fff; }
+.btn-copy:hover { background: #138496; }
+
+.btn-danger { background: #dc3545; color: #fff; }
+.btn-danger:hover { background: #c82333; }
+
+.btn-custom { 
+    background: #6c757d; 
+    color: #fff; 
+    padding: 6px 10px; 
+    font-size: 11px; 
+    margin-top: 6px; 
+    font-weight: 500;
+    align-self: flex-start;
+}
+.btn-custom:hover { background: #5a6268; }
+
+#hasil {
+    flex: 1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #004a99;
+    resize: none;
+    line-height: 1.5;
+}
+
+/* Responsif untuk layar HP / Tablet */
+@media (max-width: 950px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+    .control-container {
+        position: static;
+        height: auto;
+    }
+    .grid-row-3, .grid-row-2 {
+        grid-template-columns: 1fr;
+    }
+    #hasil {
+        min-height: 300px;
+    }
+}
