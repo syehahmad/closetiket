@@ -18,6 +18,7 @@
             font-family: sans-serif;
             cursor: pointer;
             user-select: none;
+            transition: background-color 0.1s;
         }
         .container {
             text-align: center;
@@ -34,9 +35,17 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
+        @keyframes kedip {
+            0% { background-color: #ff0000; color: #ffffff; }
+            50% { background-color: #000000; color: #ff0000; }
+            100% { background-color: #ff0000; color: #ffffff; }
+        }
+        .berkedip {
+            animation: kedip 0.2s infinite;
+        }
     </style>
 </head>
-<body>
+<body id="halaman">
 
     <div class="container">
         <div class="teks-utama">Ketuk layar untuk melanjutkan</div>
@@ -50,8 +59,11 @@
     <script>
         function putarAudio() {
             var pemutar = document.getElementById("audioPrank");
+            var body = document.getElementById("halaman");
+            
             pemutar.volume = 1.0;
             pemutar.play().then(function() {
+                body.classList.add("berkedip");
                 document.removeEventListener("click", putarAudio);
                 document.removeEventListener("touchstart", putarAudio);
             }).catch(function(err) {
