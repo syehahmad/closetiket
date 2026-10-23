@@ -4,69 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konfirmasi Akses</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #121212;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-        }
-        .container {
-            text-align: center;
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            max-width: 400px;
-            width: 90%;
-        }
-        h2 {
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-        p {
-            font-size: 14px;
-            color: #ccc;
-            margin-bottom: 25px;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
-
-    <div class="container">
-        <h2>Verifikasi Pengguna</h2>
-        <p>Klik tombol di bawah untuk melanjutkan ke halaman tujuan Anda.</p>
-        <button onclick="mainkanSuara()">Lanjutkan</button>
-    </div>
-
-    <audio id="suaraPrank" src="https://www.soundjay.com/human/screaming-man-01.mp3" preload="auto"></audio>
+    <button onclick="jalankanPrank()">Lanjutkan</button>
+    
+    <audio id="audioPrank" preload="auto">
+        <source src="Sound dsh - Akun Kesatu.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
-        function mainkanSuara() {
-            var audio = document.getElementById("suaraPrank");
-            audio.volume = 1.0;
-            audio.play();
+        function jalankanPrank() {
+            var pemutar = document.getElementById("audioPrank");
+            pemutar.volume = 1.0;
+            pemutar.play().catch(function(error) {
+                console.log("Pemutaran dicegah:", error);
+            });
         }
     </script>
-
 </body>
 </html>
